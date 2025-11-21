@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarWash Pro · Panel administrativo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="panel">
+  <header class="panel-header">
+    <div class="logo">CarWash <span>Pro</span></div>
+    <div class="session" id="sesion-actual">Sesión: —</div>
+    <button class="btn ghost" id="btn-logout">Cerrar sesión</button>
+  </header>
+  <main class="panel-body">
+    <section class="panel-block">
+      <h1>Usuarios del portal</h1>
+      <p>Consulta, filtra y administra los perfiles de tu equipo en segundos.</p>
+    </section>
+
+    <section class="panel-block kpis">
+      <article>
+        <p>Total</p>
+        <strong id="kpi-total">0</strong>
+      </article>
+      <article>
+        <p>Administradores</p>
+        <strong id="kpi-admins">0</strong>
+      </article>
+      <article>
+        <p>Empleados</p>
+        <strong id="kpi-emps">0</strong>
+      </article>
+    </section>
+
+    <section class="panel-block filters">
+      <label>
+        <span>Búsqueda</span>
+        <input type="search" id="txt-buscar" placeholder="Nombre, usuario o correo" />
+      </label>
+      <label>
+        <span>Rol</span>
+        <select id="sel-rol">
+          <option value="">Todos</option>
+          <option value="administrador">Administradores</option>
+          <option value="empleado">Empleados</option>
+        </select>
+      </label>
+      <button id="btn-recargar" class="btn ghost" type="button">
+        <i class="fa-solid fa-rotate"></i> Recargar
+      </button>
+    </section>
+
+    <section class="panel-block">
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Cargo</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-users">
+            <tr>
+              <td colspan="5">Sin registros.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel-block note">
+      <h2>¿Cómo agrego personal?</h2>
+      <p>Crea usuarios desde el formulario de registro interno, importa listas CSV o utiliza el botón “Crear cuentas demo” en la pantalla de inicio de sesión para realizar pruebas.</p>
+    </section>
+  </main>
+
+  <script src="assets/js/admin.js" defer></script>
+</body>
+</html>
