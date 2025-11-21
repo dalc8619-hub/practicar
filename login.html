@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarWash Pro · Acceso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="auth">
+  <main class="auth-card">
+    <div class="auth-card__header">
+      <a href="index.html" class="logo">CarWash <span>Pro</span></a>
+      <p>Bienvenido al portal operativo. Ingresa tus credenciales para continuar.</p>
+    </div>
+    <form id="form-login" class="auth-form">
+      <label>
+        Usuario
+        <input type="text" id="usuario" autocomplete="username" placeholder="ej. admin" />
+      </label>
+      <label>
+        Contraseña
+        <div class="password-field">
+          <input type="password" id="clave" autocomplete="current-password" placeholder="Ingresa tu clave" />
+          <button type="button" id="toggle-login-clave" aria-label="Mostrar u ocultar contraseña">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+      </label>
+      <p id="mensaje-login" class="mensaje" role="alert"></p>
+      <button type="submit" class="btn">Iniciar sesión</button>
+    </form>
+    <div class="auth-card__footer">
+      <p>¿Primera vez aquí? <button type="button" id="btn-demo" class="link-btn">Crear cuentas demo</button></p>
+      <small>El panel crea automáticamente un administrador y un empleado de ejemplo.</small>
+    </div>
+  </main>
+  <script src="assets/js/login.js" defer></script>
+</body>
+</html>
